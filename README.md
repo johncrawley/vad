@@ -21,7 +21,7 @@ Firevad has a modified 'web' package, and is different from the original vad in 
 
 ## Quick start:
 ```typescript
-import { MicVAD, RealTimeVADOptions } from "@jcrawley_dev/firevad;
+import { MicVAD, RealTimeVADOptions } from "@jcrawley_dev/firevad";
 import { ONNXRuntimeAPI } from "@jcrawley_dev/firevad/dist/_common";
 
 let stream = await navigator.mediaDevices.getUserMedia({
