@@ -10,13 +10,13 @@ Firevad has a modified 'web' package, and is different from the original vad in 
 
 
 ## Configuration:
- - copy the following files into your extension's /public directory
+ - copy the following files into your extension's 'public' directory
   - ort-wasm-simd-threaded.mjs (available from the onnx-runtime package) 
   - vad.worklet.bundle.min.js (available from this package's /dist directory)
   - silero_vad.onnx to the /public (available from this package's root directory)
  
- - you must specify the worklet URL when creating the MicVAD object, which should point to the /public directory
- - you must specify the 'ort' configuration that points the wasm path to your /public directory
+ - you must specify the worklet URL when creating the MicVAD object, which should point to the worklet bundle file in the public directory
+ - you must specify the 'ort' configuration that points to your public directory
 
 
 ## Quick start:
@@ -34,7 +34,7 @@ let stream = await navigator.mediaDevices.getUserMedia({
     });
 
 const options = {
-    workletURL: chrome.runtime.getURL('public/'),
+    workletURL: chrome.runtime.getURL('public/vad.worklet.bundle.min.js'),
     ortConfig: (ort) => { 
         ort.env.wasm.wasmPaths = chrome.runtime.getURL('public/');
     },
