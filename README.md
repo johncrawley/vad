@@ -4,7 +4,7 @@ Forked from the ricky0123/vad project, this package prompts the user for microph
 
 Firevad has a modified 'web' package, and is different from the original vad in the following ways:
  - the MicVAD object does not pass in a third parameter when creating the AudioWorkletNode
- - the FrameProcessor class found in the worklet.js (and therefore in the worklet bundle) has a hardcoded value for 'framesamples'
+ - the Processor class found in the worklet.js (and therefore in the worklet bundle) uses a hard-coded value for 'targetFrameSize', instead of using the 'framesamples' parameter
  - the MicVAD class uses a custom model fetcher to ensure that the returned model is of type ArrayBuffer
  - the MicVAD class has been altered to ensure that frame objects are of type Float32Array
 
