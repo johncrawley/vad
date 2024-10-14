@@ -35,7 +35,7 @@ let stream = await navigator.mediaDevices.getUserMedia({
 
 const options = {
     workletURL: chrome.runtime.getURL('public/vad.worklet.bundle.min.js'),
-    ortConfig: (ort) => { 
+    ortConfig: (ort: ONNXRuntimeAPI) => { 
         ort.env.wasm.wasmPaths = chrome.runtime.getURL('public/');
     },
     positiveSpeechThreshold: 0.8,
