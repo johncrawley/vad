@@ -28,7 +28,7 @@ class Processor extends AudioWorkletProcessor {
     this.resampler = new Resampler({
       nativeSampleRate: sampleRate,
       targetSampleRate: 16000,
-      targetFrameSize: this.options.frameSamples,
+      targetFrameSize: 1536,
     })
     this._initialized = true
     log.debug("initialized worklet")
