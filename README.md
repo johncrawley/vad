@@ -1,12 +1,13 @@
-# Firevad - Voice Activity Detector for Firefox Browser Extensions
+# Firevad - Voice Activity Detector for Firefox Browser Add-Ons
  
-Forked from the ricky0123/vad project, this package prompts the user for microphone permissions and run callbacks on segments of audio with user speech. This package has been adapted to specifically run on Firefox Browser Extensions. If you want to detect voice via Chrome Extensions or elsewhere, it is recommended to use the original project.
+Forked from the ricky0123/vad project, this package prompts the user for microphone permissions and run callbacks on segments of audio with user speech. This package has been adapted to specifically run on Firefox Browser Add-Ons. If you want to detect voice via Chrome Extensions or elsewhere, it is recommended to use the original project.
 
 Firevad has a modified 'web' package, and is different from the original vad in the following ways:
  - the MicVAD object does not pass in a third parameter when creating the AudioWorkletNode
  - the Processor class found in the worklet.js (and therefore in the worklet bundle) uses a hard-coded value for 'targetFrameSize', instead of using the 'framesamples' parameter
  - the MicVAD class uses a custom model fetcher to ensure that the returned model is of type ArrayBuffer
  - the MicVAD class has been altered to ensure that frame objects are of type Float32Array
+ - the onnxruntime-web dependency has been updated
 
 
 ## Configuration:
@@ -65,6 +66,3 @@ mic.start();
 Please contribute to the original VAD project financially - especially if your commercial product relies on this package. [![Become a Sponsor](https://img.shields.io/static/v1?label=Become%20a%20Sponsor&message=%E2%9D%A4&logo=GitHub&style=flat&color=d42f2d)](https://github.com/sponsors/ricky0123
 
 For more information on the original project: [vad.ricky0123.com](https://www.vad.ricky0123.com).
-
-Silero VAD: pre-trained enterprise-grade Voice Activity Detector (VAD), Number Detector and Language Classifier.
-GitHub, GitHub repository, https://github.com/snakers4/silero-vad, hello@silero.ai.
