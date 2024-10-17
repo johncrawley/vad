@@ -15,7 +15,7 @@ const bundleConfig = ({ mode, suffix }) => {
           },
         },
         {
-          test: /vad\.\worklet\.bundle\..*\.js/,
+          test: /vad\.\worklet\.bundle\.js/,
           type: "asset/resource",
           generator: {
             filename: "[name][ext]",
