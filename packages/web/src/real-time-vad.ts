@@ -182,7 +182,7 @@ export class AudioNodeVAD {
       await ctx.audioWorklet.addModule(fullOptions.workletURL)
     } catch (e) {
       console.error(
-        `Encountered an error while loading worklet. Please make sure the worklet vad.bundle.min.js included with @ricky0123/vad-web is available at the specified path:
+        `Encountered an error while loading worklet. Please make sure the worklet bundle is available at the specified path:
         ${fullOptions.workletURL}
         If need be, you can customize the worklet file location using the \`workletURL\` option.`
       )
@@ -197,7 +197,7 @@ export class AudioNodeVAD {
       )
     } catch (e) {
       console.error(
-        `Encountered an error while loading model file. Please make sure silero_vad.onnx, included with @ricky0123/vad-web, is available at the specified path:
+        `Encountered an error while loading model file. Please make sure silero_vad.onnx, is available at the specified path:
       ${fullOptions.modelURL}
       If need be, you can customize the model file location using the \`modelsURL\` option.`
       )
